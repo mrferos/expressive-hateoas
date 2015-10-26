@@ -1,0 +1,19 @@
+{
+    "name": "mrferos/expressive-hateoas",
+    "autoload": {
+        "psr-4": {
+            "MrfExpressive\\Hateoas\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MrfExpressive\\Hateoas\\Tests\\": "src/"
+        }
+    },
+    "require": {
+        "zendframework/zend-expressive": "^0.5.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.0"
+    }
+}
