@@ -15,23 +15,15 @@ Usage isn't the simplest and I'm working on making it easier but essentially you
 of usage:
 ```php
 <?php
-
 namespace App\Action;
 
-use App\TestResult;
+/** snipping namespaces for breviy **/
 use MrfExpressive\Hateoas\HateoasTrait;
 use MrfExpressive\Hateoas\Response as HateoasResponse;
-use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\ServerRequestInterface;
-use Zend\Diactoros\Response\HtmlResponse;
-use Zend\Diactoros\Response\JsonResponse;
-use Zend\Expressive\Router;
-use Zend\Expressive\Template;
 
 class HomePageAction
 {
     private $router;
-
     private $template;
 
     use HateoasTrait;
@@ -70,3 +62,53 @@ return $next(
     }
 );
 ```
+
+The above code will result in a JSON response like so:
+```json
+{
+    "0": 0,
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9,
+    "10": 10,
+    "11": 11,
+    "12": 12,
+    "13": 13,
+    "14": 14,
+    "15": 15,
+    "16": 16,
+    "17": 17,
+    "18": 18,
+    "19": 19,
+    "20": 20,
+    "21": 21,
+    "22": 22,
+    "23": 23,
+    "24": 24,
+    "_links": {
+        "first": {
+            "href": "\/customers\/1\/payments?page=1&size=25"
+        },
+        "current": {
+            "href": "\/customers\/1\/payments?page=1&size=25"
+        },
+        "last": {
+            "href": "\/customers\/1\/payments?page=4001&size=25"
+        },
+        "next": {
+            "href": "\/customers\/1\/payments?page=2&size=25"
+        }
+    }
+}
+```
+
+## Todos:
+[] Add more tests
+[] Make the traits respect configuration
+[] Come up with an easier way of using it
