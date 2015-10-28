@@ -44,7 +44,8 @@ class Middleware implements MiddlewareInterface
             case $data instanceof \Traversable:
                 return $out($request, $this->handleCollection($request, $response));
             case is_array($data):
-                return $out($request, $response);
+                $responseFactory = $response->getResponseFactory();
+                return $out($request, $responseFactory($response->getData()));
         }
     }
 
