@@ -109,6 +109,6 @@ The above code will result in a JSON response like so:
 ```
 
 ## Todos:
-[] Add more tests
-[] Make the traits respect configuration
-[] Come up with an easier way of using it
+- [ ] Add more tests
+- [ ] Make the traits respect configuration
+- [ ] Come up with an easier way of using it
