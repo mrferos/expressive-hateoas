@@ -49,6 +49,14 @@ class Response extends DiactorosResponse
     }
 
     /**
+     * @param callable $responseFactory
+     */
+    public function setResponseFactory($responseFactory)
+    {
+        $this->responseFactory = $responseFactory;
+    }
+
+    /**
      * @return mixed
      */
     public function getData()

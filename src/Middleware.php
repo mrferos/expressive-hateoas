@@ -17,12 +17,16 @@ class Middleware implements MiddlewareInterface
      * @var Config
      */
     protected $config;
+    /**
+     * @var callable
+     */
+    protected $extractor;
 
 
-    public function __construct(RouterInterface $router,  Config $config)
+    public function __construct(RouterInterface $router, Config $config, callable $extractor = null)
     {
-        $this->router = $router;
-        $this->config = $config;
+        $this->router    = $router;
+        $this->config    = $config;
     }
 
 
